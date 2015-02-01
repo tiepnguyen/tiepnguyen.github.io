@@ -177,6 +177,9 @@ section {
 	font-size: 36px;
 	margin: 0;
 }
+.intro_headline img {
+	max-width: 490px;
+}
 
 /**
  * Profile section
@@ -198,6 +201,7 @@ section {
 	color: #FFF;
 	margin-left: 10px;
 	padding-top: 4em;
+	width: 400px;
 }
 .skillset ul {
 	list-style: none;
@@ -254,9 +258,9 @@ section {
 	bottom: 50px;
 	overflow: hidden;
 }
-.card_list img {
-	width: 100%;
-	height: auto;
+.card_list img, .card_list img[style] {
+	width: 100%!important;
+	height: auto!important;
 }
 .product_name {
 	margin: .5em 0 .25em;
