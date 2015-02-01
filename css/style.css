@@ -1,0 +1,378 @@
+/**
+ * Reset & Override
+ */
+html, body {
+	height: 100%;
+	cursor: default;
+}
+body, ul {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+}
+td {
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+nav ul {
+	list-style: none;
+}
+input[type=text], input[type=email], textarea {
+	border: 1px solid #CCC;
+	outline: none;
+	padding: 8px;
+	font-family: inherit;
+	font-size: 1em;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+/**
+ * Default styles
+ */
+body {
+	font: 300 14px/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444;
+}
+.wrapper {
+	max-width: 980px;
+	margin: auto;
+}
+.clear {
+	clear: both;
+}
+.button {
+	font-size: 1em;
+	border: 1px solid #09F;
+	padding: 8px 18px;
+	border-radius: 3px;
+	background-color: #FFF;
+	color: #09F;
+	cursor: pointer;
+	-webkit-transition: .25s;
+	-o-transition: .25s;
+	transition: .25s;
+}
+.button:hover {
+	background-color: #09F;
+	color: #FFF;
+}
+/**
+ * Navigator style
+ */
+.master_nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 52px;
+	background: rgba(0, 0, 0, .25);
+	text-align: center;
+	line-height: 52px;
+	z-index: 1;
+}
+.master_nav li {
+	display: inline-block;
+}
+.master_nav li a {
+	color: #FFF;
+	display: block;
+	padding: 0 32px;
+}
+.master_nav li:hover a {
+	background: rgba(0, 0, 0, .25);
+	color: #FFF;
+}
+.master_nav.fixed {
+	position: fixed;
+	top: 0;
+	background: rgba(255, 255, 255, .9);
+	box-shadow: 0 0 1px rgba(0, 0, 0, .25);
+}
+.master_nav.fixed a {
+	color: #000;
+}
+.master_nav.fixed .action_head {
+	border-color: #000;
+}
+.master_nav, .master_nav a {
+	-webkit-transition: .25s;
+	-o-transition: .25s;
+	transition: .25s;
+}
+.action_head {
+	display: block;
+	min-width: 28px;
+	/*padding: 0 14px;*/
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #FFF;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -16px;
+	border-radius: 16px;
+	color: #FFF;
+}
+.action_head::before {
+	font-family: FontAwesome;
+	content: '\f09a';
+}
+.action_head span {
+	display: none;
+	width: 0;
+	overflow: hidden;
+}
+.action_head:hover {
+	padding: 0 14px;
+}
+.action_head:hover span {
+	display: inline;
+}
+/**
+ * Section styles
+ */
+section {
+	/*min-height: 100%;*/
+}
+.headline {
+	margin-bottom: 4em;
+}
+.headline.centerize {
+	text-align: center;
+}
+.maintitle {
+	font-weight: inherit;
+	font-size: 2.25em;
+	margin: 0;
+}
+.subtitle {
+	font-weight: inherit;
+	font-size: 1.5em;
+	margin: 0;
+}
+/**
+ * Cover section
+ */
+.cover {
+	height: 100%;
+	background: url(../images/cover_bg_med@2x.jpg) center top no-repeat;
+	background-size: cover;
+}
+.intro_headline {
+	color: #FFF;
+	text-align: center;
+	font-family: "gloucester mt extra condensed";
+	padding-top: 60px;
+}
+.intro_headline h1 {
+	font-size: 72px;
+	margin: 0;
+}
+.intro_headline p {
+	font-size: 36px;
+	margin: 0;
+}
+
+/**
+ * Profile section
+ */
+.profile {
+	padding-top: 60px;
+	min-height: 100%;
+}
+
+/**
+ * Skillset section
+ */
+.skillset {
+	height: 600px;
+	background: url(../images/dashboard_bg@2x.jpg) center no-repeat;
+	background-size: cover;
+}
+.skillset .headline {
+	color: #FFF;
+	margin-left: 10px;
+	padding-top: 4em;
+}
+.skillset ul {
+	list-style: none;
+	margin-left: 10px;
+	width: 400px;
+}
+.skillset li {
+	display: block;
+	color: #FFF;
+	margin-bottom: 1.5em;
+	border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+.skillset span {
+	display: block;
+	height: 1px;
+	background: rgba(255, 255, 255, .75);
+	margin-top: .5em;
+	margin-bottom: -1px;
+}
+
+/**
+ * Portfolio section
+ */
+.portfolio {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.portfolio .headline p {
+	margin: .5em 0 0;
+	font-size: 1.125em;
+	color: #777;
+}
+.card_list {
+	list-style: none;
+}
+.card_list li {
+	display: block;
+	float: left;
+	width: 33.33%;
+	position: relative;
+	margin-bottom: 1em;
+}
+.card_list a {
+	display: block;
+	margin: 10px;
+	color: #555;
+}
+.card_list a span {
+	display: block;
+	background: #EEE;
+	width: 100%;
+	height: 0;
+	padding-bottom: 50%;
+	bottom: 50px;
+	overflow: hidden;
+}
+.card_list img {
+	width: 100%;
+	height: auto;
+}
+.product_name {
+	margin: .5em 0 .25em;
+	font-weight: normal;
+	font-size: 1.125em;
+}
+.product_caption {
+	margin: 0;
+}
+.product_name, .product_caption {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.card_list a:hover .product_name {
+	color: #09F;
+}
+/**
+ * Contact section
+ */
+.contact {
+	padding-top: 100px;
+	background-color: #333;
+}
+.contact .subtitle {
+	color: #FFF;
+	text-align: center;
+	margin: 1em 0;
+}
+.contact_list {
+	list-style: none;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.contact_list li {
+	display: inline-block;
+	-webkit-transition: .25s;
+	-o-transition: .25s;
+	transition: .25s;
+}
+.contact_list a {
+	color: #CCC;
+	font-size: 1.125em;
+	display: block;
+	float: left;
+	padding: 2px;
+	margin: 0 20px;
+}
+.contact_list a::before {
+	font-family: FontAwesome;
+	font-size: 1.5em;
+	padding-right: 8px;
+}
+.contact_list .email::before {
+	content: '\f003';
+}
+.contact_list .phone::before {
+	content: '\f095';
+}
+.contact_list .skype::before {
+	content: '\f17e';
+}
+.contact_list .facebook::before {
+	content: '\f082';
+}
+.contact_list li:hover a {
+	color: #FFF;
+}
+.contact_list li:hover {
+	-webkit-transform: scale(1.25, 1.25);
+	-ms-transform: scale(1.25, 1.25);
+	-o-transform: scale(1.25, 1.25);
+	transform: scale(1.25, 1.25);
+}
+
+.contact_form {
+	width: 480px;
+	margin: auto;
+	padding-bottom: 80px;
+}
+.contact_form table {
+	width: 100%;
+}
+.contact_form td {
+	padding-bottom: 20px;
+}
+.contact_form tr:first-child td {
+	padding-left: 10px;
+}
+.contact_form tr:first-child td:first-child {
+	padding-left: 0;
+	padding-right: 10px;
+}
+.contact_form input[type=text], .contact_form input[type=email], .contact_form textarea {
+	font-size: 13px;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	background-color: #4C4C4C;
+	color: #FFF;
+	resize: none;
+}
+.contact_form button {
+	background-color: #333;
+	color: #FFF;
+	/*border-color: #78be20;*/
+	font-size: 13px;
+	float: right;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.footer {
+	background: #404040;
+	text-align: center;
+	color: #AAA;
+	font-size: 14px;
+	padding: 20px 0;
+}
