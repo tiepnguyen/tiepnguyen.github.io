@@ -9,11 +9,11 @@ jQuery(function($) {
 	var dialog = $('#dialog');
 	var sections = {};
 
-	(function sectionPositions() {
+	function sectionPositions() {
 		$('section').each(function() {
 			sections[this.id] = parseInt($(this).position().top);
 		});
-	})();
+	};
 
 	$('a[rel=external]').on('click', function(e) {
 		e.preventDefault();

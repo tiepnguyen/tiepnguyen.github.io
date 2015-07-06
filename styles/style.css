@@ -5,6 +5,11 @@ body {
 	height: 100%;
 }
 
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
 body {
 	font: 300 13px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #333;
@@ -68,7 +73,7 @@ textarea[disabled] {
 }
 
 .wrapper {
-	width: 960px;
+	max-width: 960px;
 	margin: auto;
 }
 
@@ -311,6 +316,11 @@ textarea[disabled] {
 	margin: 40px 0;
 }
 
+.skillset .grid-cell {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 .skill-overlay {
 	position: absolute;
 	top: 0;
@@ -393,9 +403,16 @@ textarea[disabled] {
 	margin: 100px 0 2em;
 }
 
-.os-list li {
+.os-list.col-4 li {
 	text-align: center;
 	font-size: 1.5em;
+	height: auto;
+	padding-top: 0;
+}
+
+.os-list .grid-cell {
+	position: relative;
+	margin-bottom: 40px;
 }
 
 .os-logo {
@@ -501,7 +518,7 @@ textarea[disabled] {
 	color: #CCC;
 	font-size: 1.25em;
 	display: block;
-	margin: 0 20px;
+	margin: 10px 20px;
 }
 
 .contact-list i {
@@ -898,3 +915,60 @@ webkit-keyframes barberpole {
 		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 	}
 }
+/**
+ * Responsive Styles
+ */
+
+@media screen and (max-width: 980px) {
+	.wrapper {
+		margin: 0 20px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.wrapper {
+		margin: 0 10px;
+	}
+	.grid {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.job-list .grid-cell {
+		padding: 10px;
+	}
+	.product-list .grid-cell {
+		margin: 10px;
+	}
+	.product-list.col-3 li,
+	.os-list.col-4 li {
+		width: 50%;
+	}
+	.contact-form {
+		width: auto;
+		margin: 0 10px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.grid.col-4 li,
+	.grid.col-3 li {
+		width: 100%;
+	}
+	.skillset.col-4 li {
+		padding-top: 50%;
+	}
+	.os-list.col-4 li {
+		width: 50%;
+	}
+	.master-nav ul:first-child {
+		display: none;
+	}
+	.headline {
+		font-size: 4em;
+	}
+	.subtitle {
+		font-size: 1.5em;
+	}
+	.contact .fb-like {
+		display: none;
+	}
