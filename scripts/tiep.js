@@ -53,20 +53,24 @@ jQuery(function($) {
 	}).on('resize', function() {
 		windowHeight = $window.height();
 		sectionPositions();
-	});
+	}).trigger('resize');
 
 	$('#contact_form').on('submit', function(e) {
 		e.preventDefault();
 		var form = $(this);
+		var data = form.serialize();
 		var fields = form.find('input, textarea, button').prop('disabled', true);
 		var submitBtn = form.find(':submit').addClass('active');
 
-		timeout = setTimeout(function() {
-			fields.val('').prop('disabled', false);
-			submitBtn.removeClass('active');
-			overlay.addClass('active');
-			dialog.addClass('jelly');
-		}, 2000);
+		console.log('send contact', data);
+		$.post('contact.php', data, function(response) {
+			if (response.code == '1') {
+				fields.val('').prop('disabled', false);
+				submitBtn.removeClass('active');
+				overlay.addClass('active');
+				dialog.addClass('jelly');
+			}
+		});
 	});
 
 	$('#dialog .dialog-action a').on('click', function(e) {
